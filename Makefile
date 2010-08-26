@@ -8,11 +8,14 @@ AUTOFILE = nterm-auto-load
 
 INSTALLDIR = ${HOME}/build/lisp/ivan
 
-all: $(ELC) $(AUTOFILE).elc
+all: $(ELC) $(AUTOFILE).elc nterm.info
 
 $(AUTOFILE).el: $(SRC)
 	@$(EMACS) $(AUTOLOAD) $(SRC) 
 	@rm -f $(AUTOFILE).el~
+
+nterm.info: nterm.texi
+	makeinfo nterm.texi
 
 include elisp.mk
 

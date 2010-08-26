@@ -1,0 +1,47 @@
+\input texinfo.tex    @c -*-texinfo-*-
+@c %**start of header
+@setfilename nterm.info
+@settitle Nterm User Manual
+@documentencoding utf-8
+@c %**end of header
+
+@dircategory Emacs
+@direntry
+* Nterm: (nterm).        Nterm buffers that inherit modes
+@end direntry
+
+@copying
+Copyright @copyright{} 2010, Christopher Browne
+
+@quotation
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+Texts.
+@end quotation
+@end copying
+
+@node Top
+@top Nterm User Manual
+
+Nterm is an extension to Emacs that emulates a terminal.
+
+@menu
+* Introduction::                
+* Acknowledgments::             
+@end menu
+
+@node Introduction
+@chapter Introduction
+
+With Nterm, you can switch to a buffer that emulates a vt100.
+
+@node Acknowledgments
+@chapter Acknowledgments
+
+Nterm was written by Ivan Kanis.
+
+Documentation by Christopher Browne.
+
+@bye
