@@ -4,7 +4,6 @@ EMACS= emacs --no-init-file --no-site-file -batch \
 --eval "(setq load-path (cons \".\" load-path))" $(EMACSARG)
 
 AUTOLOAD= --eval "(setq load-path (cons \"..\" load-path))" \
---eval "(require 'ivan-autoload)" \
 --eval "(let ((generated-autoload-file (expand-file-name \"$@\"))) \
   (mapcar (function update-file-autoloads) command-line-args-left) \
   (save-buffers-kill-emacs t))"
