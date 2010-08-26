@@ -7,7 +7,7 @@
 
 @dircategory Emacs
 @direntry
-* Nterm: (nterm).        Nterm buffers that inherit modes
+* Nterm: (nterm).        Nterm terminal emulator
 @end direntry
 
 @copying
@@ -28,7 +28,12 @@ Texts.
 Nterm is an extension to Emacs that emulates a terminal.
 
 @menu
-* Introduction::                
+* Introduction::
+* Configuration::
+* Recording Mode::
+* Terminal Memory::
+* Memory Dump Mode::
+* ToDo::
 * Acknowledgments::             
 @end menu
 
@@ -36,6 +41,70 @@ Nterm is an extension to Emacs that emulates a terminal.
 @chapter Introduction
 
 With Nterm, you can switch to a buffer that emulates a vt100.
+
+Features include:
+@itemize @bullet
+@item G0 G1 switching with shift in and shift out
+@item special graphics characters (used for line drawing)
+@item blinking, bright, underline and reverse rendition
+@item scroll up and down including within top and bottom margin
+@item switch terminal background color
+@item switch between 80 and 132 columns screen
+@item tabulation set and reset
+@item all VT100 escape sequences are handled
+@item Double width character
+@item Double height character
+@end itemize
+
+@node Configuration
+@chapter Configuration
+
+@itemize @bullet
+@item nterm-shell
+@item nterm-height
+@item nterm-width
+@item nterm-buffer-name
+@end itemize
+
+@node ToDo
+@chapter Todo
+
+Things that remain to be done:
+@itemize @bullet
+@item fix line drawing single width characters
+@item bind C-c C-c to interrupt
+@item fix slow crolling
+@item fix buffer popping when changing cursor position
+@item US and UK character set.
+@item ANSI color
+@item VT52 compatibility mode
+@item Copy and paste mechanism
+@item xterm emulator
+@item Directory tracking
+@item Handle multiple instance
+@item Look for TBD in this file for other things...
+@end itemize
+
+@node Recording Mode
+@chapter Recording Mode
+
+Hit F11 to record and replay traces.
+
+The recorder takes a trace of characters received by the
+terminal. Someone can easily reproduce a bug by replaying the trace
+both on xterm and nterm.
+
+@node Terminal Memory
+@chapter Terminal Memory
+
+So that area of the terminal can be redrawn for blinking and changing
+screen background.
+
+@node Memory Dump Mode
+@chapter Memory Dump Mode
+
+There is a memory dump mode (f10) that allows the programmer to
+examine the memory.
 
 @node Acknowledgments
 @chapter Acknowledgments
